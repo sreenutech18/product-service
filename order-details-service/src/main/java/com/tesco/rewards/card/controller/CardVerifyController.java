@@ -4,7 +4,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestHeader;
-import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.tesco.rewards.card.model.CardVerifyRequest;
@@ -13,7 +12,6 @@ import com.tesco.rewards.card.service.CardVerifyService;
 import com.tesco.rewards.card.validator.CardVerifyValidator;
 
 @RestController
-@RequestMapping(value="/v1")
 public class CardVerifyController {
 	
 	@Autowired
@@ -25,9 +23,9 @@ public class CardVerifyController {
 	
 	@PostMapping("/card/validate")
 	public CardVerifyResponse validateCard(@RequestBody CardVerifyRequest request,
-										   @RequestHeader(value="client-id", required=false) String clientId,
-										   @RequestHeader(value="request-id", required=false) String requestId,
-										   @RequestHeader(value="message-ts", required=false) String messageTs) {
+										   @RequestHeader(value="client-id", required=false) String clientId
+										  
+										  ) {
 		
 		//Get the request from consumers
 		//validate the request

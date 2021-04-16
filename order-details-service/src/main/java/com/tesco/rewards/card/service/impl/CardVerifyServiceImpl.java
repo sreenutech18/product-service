@@ -11,8 +11,7 @@ import com.tesco.rewards.card.service.CardVerifyService;
 @Component
 public class CardVerifyServiceImpl implements CardVerifyService {
 
-	@Autowired
-	CardVerifyDao cardVerifyDao;
+	
 	
 	public CardVerifyResponse validateCard(CardVerifyRequest request) {
 		
